@@ -139,7 +139,6 @@ footer{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-co
       <p class="role">Localization, state estimation, and system health for industrial inspection robots.</p>
       <p class="lede">Five years at Gecko Robotics, working on robots that crawl boilers, tanks, ship decks, and pipes to measure asset health. I started in the field, moved into test and reliability, built prototype systems on my own as a forward-deployed engineer, and now write C++ and ROS 2 for the next-generation platform.</p>
       <div class="contact">
-        <button class="chip" id="copy-email" type="button" aria-label="Copy email address">ajschwacha@gmail.com <span id="copy-state" class="label" style="font-size:10px">copy</span></button>
         <a class="chip" href="https://www.linkedin.com/in/alec-schwacha-85215419b" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
@@ -368,19 +367,11 @@ footer{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-co
 
   <footer>
     <span>B.S. Mechanical Engineering, University of Pittsburgh, 2021 · 2nd place, Swanson School Design Expo</span>
-    <span>ajschwacha@gmail.com</span>
   </footer>
 </div>
 
 <script>
 (function(){
-  var btn=document.getElementById('copy-email'), st=document.getElementById('copy-state');
-  btn.addEventListener('click',function(){
-    var done=function(){st.textContent='copied';setTimeout(function(){st.textContent='copy'},1600)};
-    try{navigator.clipboard.writeText('ajschwacha@gmail.com').then(done,function(){st.textContent='select to copy'})}
-    catch(e){st.textContent='select to copy'}
-  });
-
   var c=document.getElementById('ascan'), ctx=c.getContext('2d');
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
